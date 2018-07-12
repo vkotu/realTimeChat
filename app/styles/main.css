@@ -1,18 +1,27 @@
+html {
+    height: 100%;
+}
 body {
     font: 1em sans-serif;
+    height: 100%;
 }
+
 
 .header {
     display: flex;
-    justify-content: left;
+    justify-content: space-between;
     padding: 20px;
     border-top: solid 4px black;
     margin: -8px;
 }
 .h-text {
-    background-color: black;
     color: white;
+    display: flex;
+}
+
+.h-text span {
     padding: 5px;
+    background-color: black;
 }
 
 .h-icon {
@@ -22,16 +31,106 @@ body {
 
 .chat-container {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90%;
 }
 
-.left-box, .right-box {
+.userName {
+    width: 50%;
+    text-align: center;
+}
+
+.chat div:first-of-type {
+    overflow: auto;
+}
+
+.chat {
+    background-image: url("../../images/background.png");
     margin: 10px;
     padding: 10px;
     border: solid 1px lightgrey;
-    height: 500px;
     width: 50%;
-    background-color: lightgray;
+    height: 100%;
     box-shadow: 0 0 10px rgba(0,0,0,0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
+
+form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+form input{
+    height: 30px;
+    width: 85%;
+    font-size: larger;
+}
+
+form button {
+    height: 35px;
+    padding: 1px;
+    background-color: lightskyblue;
+    width: 13%;
+}
+
+.userName form {
+    align-items: center;
+    justify-content: center;
+}
+
+.userName form input {
+    width: 50%;
+    margin-right: 5px;
+}
+
+.chat ul {
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.chat li {
+    list-style: none;
+    border: solid 1px transparent;
+    width: 50%;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+.nav {
+    list-style: none;
+    display: flex;
+    flex-flow: row;
+    margin: 0; 
+}
+
+.nav a {
+    text-decoration: none;
+    display: block;
+    color: white;
+    padding: 5px;
+    background: black;
+  }
+
+  .user-enter {
+    margin: 3px;
+    align-self: center;
+    text-align: center;
+  }
+
+  .self-message {
+    margin: 3px;
+    background:lightseagreen;
+    align-self: flex-start;
+  }
+
+  .incoming-message {
+    margin: 3px;
+    background: ghostwhite;
+    align-self: flex-end;
+  }
