@@ -1,0 +1,37 @@
+body {
+    font: 1em sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: left;
+    padding: 20px;
+    border-top: solid 4px black;
+    margin: -8px;
+}
+.h-text {
+    background-color: black;
+    color: white;
+    padding: 5px;
+}
+
+.h-icon {
+    height: 25px;
+    width: 40px;
+}
+
+.chat-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.left-box, .right-box {
+    margin: 10px;
+    padding: 10px;
+    border: solid 1px lightgrey;
+    height: 500px;
+    width: 50%;
+    background-color: lightgray;
+    box-shadow: 0 0 10px rgba(0,0,0,0.6);
+}
