@@ -42,7 +42,7 @@ function handleNewUser () {
         socket = io();
         initSocketIoListener();
         userName = $.trim($('#name').val());
-        $('#messages').append($('<li class="user-enter">').text('You entered the chat!!'));
+        $('#messages').append($('<li class="user-enter">').text('Welcome ' + userName + "!!"));
         socket.emit('new_user', userName);
         return false;
     });

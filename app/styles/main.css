@@ -129,14 +129,14 @@ form button {
   .self-message {
     margin: 3px;
     background:lightsteelblue;
-    align-self: flex-start;
+    align-self: flex-end;
     position: relative;
   }
 
   .incoming-message {
     margin: 3px;
     background: aliceblue;
-    align-self: flex-end;
+    align-self: flex-start;
     position: relative;
   }
 
