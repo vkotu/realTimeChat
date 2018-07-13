@@ -8,15 +8,24 @@ function init() {
 
 function initSocketIoListener () {
     socket.on('chat_message', function (data) {
+        if(data && !$.trim(data.msg)) {
+            return;
+        }
         $('#messages').append($('<li class="incoming-message">').text(data.userName + ': ' + data.msg));
         $("#msg-container").scrollTop($("#msg-container")[0].scrollHeight);
     });
 
     socket.on('new_user', function (name) {
+        if (!name) {
+            return;
+        }
         $('#messages').append($('<li class="user-enter">').text(name + ' entered the chat!!'));
     });
 
     socket.on('user_disconnected', function (name) {
+        if(!name) {
+            return;
+        }
         $('#messages').append($('<li class="user-enter">').text(name + ' disconnected from chat!!'));
     });
 }

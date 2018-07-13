@@ -11,7 +11,6 @@ function handleIo(socket) {
         console.log(clients[socket.id].name + ' - client disconnected');
         socket.broadcast.emit('user_disconnected', clients[socket.id].name);
         delete clients[socket.id];
-        console.log(clients);
     });
 
     socket.on('chat_message', function (info) {
@@ -25,7 +24,6 @@ function handleIo(socket) {
         if (clients[socket.id]) {
             clients[socket.id].name = name;
         }
-        console.log(clients);
         socket.broadcast.emit('new_user', name);
     });
 };

@@ -12,5 +12,6 @@ module.exports = function (req, res, next) {
         console.log(__dirname );
         res.sendFile(path.join(__dirname + '/../templates/index.html'));
     });
+    //
     return router;
 }
