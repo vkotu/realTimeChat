@@ -4,6 +4,19 @@ html {
 body {
     font: 1em sans-serif;
     height: 100%;
+    position: relative;
+}
+
+body::after {
+    content: "";
+    background: url("../../images/bg.jpg");
+    opacity: 0.9;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
 }
 
 
@@ -21,12 +34,14 @@ body {
 
 .h-text span {
     padding: 5px;
-    background-color: black;
+    font-size: larger;
+    color: #ffffe6;
 }
 
 .h-icon {
-    height: 25px;
+    height: 30px;
     width: 40px;
+    border-radius: 25px;
 }
 
 .chat-container {
@@ -42,10 +57,10 @@ body {
 }
 
 .chat {
+    background: white;
     visibility: hidden;
     opacity: 0.5;
     pointer-events: none;
-    background-image: url("../../images/background.png");
     margin: 10px;
     padding: 10px;
     border: solid 1px lightgrey;
@@ -72,8 +87,11 @@ form input{
 form button {
     height: 35px;
     padding: 1px;
-    background-color: lightskyblue;
+    background: #ffffb3;
+    font-size: large;
     width: 13%;
+    border-radius: 6px;
+
 }
 
 .userName {
@@ -89,6 +107,7 @@ form button {
 .userName form input {
     width: 50%;
     margin-right: 5px;
+    background: #ffffe6;
 }
 
 .chat ul {
@@ -113,11 +132,13 @@ form button {
 }
 
 .nav a {
+    border: solid 1px;
+    border-radius: 10px;
     text-decoration: none;
     display: block;
-    color: white;
+    color: #ffffe6;
     padding: 5px;
-    background: black;
+    font-size: larger;
   }
 
   .user-enter {
@@ -128,14 +149,14 @@ form button {
 
   .self-message {
     margin: 3px;
-    background:lightsteelblue;
+    background:#98FB98;
     align-self: flex-end;
     position: relative;
   }
 
   .incoming-message {
     margin: 3px;
-    background: aliceblue;
+    background: #cce6ff;
     align-self: flex-start;
     position: relative;
   }
@@ -152,9 +173,9 @@ form button {
   }
 
   .self-message::before {
-    border-right: 13px solid lightsteelblue;
+    border-right: 13px solid #98FB98;
   }
 
   .incoming-message::before {
-    border-right: 13px solid aliceblue;
+    border-right: 13px solid #cce6ff;
   }
