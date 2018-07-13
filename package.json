@@ -1,0 +1,31 @@
+{
+  "name": "chatrealtime",
+  "version": "1.0.0",
+  "description": "simple chat application using socket.io",
+  "main": "Y",
+  "dependencies": {
+    "express": "^4.16.3",
+    "node-static": "^0.7.10",
+    "nodemon": "^1.18.1",
+    "path": "^0.12.7",
+    "socket.io": "^2.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vkotu/realTimeChat.git"
+  },
+  "keywords": [
+    "chat",
+    "socket.io"
+  ],
+  "author": "kotu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vkotu/realTimeChat/issues"
+  },
+  "homepage": "https://github.com/vkotu/realTimeChat#readme"
+}
